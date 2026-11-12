@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: better-server
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/better?connectionTimeZone=Asia/Shanghai&forceConnectionTimeZoneToSession=true
+    username: ${BETTER_DB_USERNAME}
+    password: ${BETTER_DB_PASSWORD}
+
+  servlet:
+    multipart:
+      max-file-size: 10MB # 单文件大小上限
+      max-request-size: 50MB # 单次请求大小上限
+
+server:
+  port: 9090
+
+logging:
+  level:
+    root: INFO
+
+springdoc:
+  packagesToScan: io.github.clfundev.better.controller
+
+security:
+  ignored:
+    urls:
+      - /swagger-ui.html
+      - /swagger-ui/**
+      - /v3/api-docs/**
+      - /user/login
+      - /user/register
+      - /user/refresh
+
+jwt:
+  secret: ${BETTER_JWT_SECRET}
+  at-expiration-ms: 1800000
+  rt-expiration-ms: 604800000
