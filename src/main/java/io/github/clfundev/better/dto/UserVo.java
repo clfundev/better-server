@@ -17,11 +17,6 @@ public class UserVo {
     private String username;
 
     /**
-     * 是否启用：1-启用；0-禁用
-     */
-    private Integer enabled;
-
-    /**
      * 昵称
      */
     private String nickname;
@@ -37,12 +32,7 @@ public class UserVo {
     private String avatar;
 
     /**
-     * 创建时间
+     * 注册时间
      */
     private Instant createdAt;
-
-    /**
-     * 更新时间
-     */
-    private Instant updatedAt;
 }
