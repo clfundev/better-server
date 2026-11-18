@@ -21,7 +21,7 @@ logging:
     root: INFO
 
 springdoc:
-  packagesToScan: io.github.clfundev.better.controller
+  packagesToScan: io.github.clfundev.better.server.controller
 
 security:
   ignored:
