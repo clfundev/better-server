@@ -37,3 +37,6 @@ jwt:
   secret: ${BETTER_JWT_SECRET}
   at-expiration-ms: 1800000
   rt-expiration-ms: 604800000
+
+backup:
+  upload-dir: "D:/better_server_data/backup"

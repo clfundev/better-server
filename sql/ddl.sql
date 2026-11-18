@@ -36,3 +36,15 @@ CREATE TABLE `tb_refresh_token`
     ENGINE = InnoDB
     DEFAULT CHARSET = utf8mb4
     COLLATE = utf8mb4_0900_ai_ci;
+
+CREATE TABLE `tb_backup`
+(
+    `id`         CHAR(32) NOT NULL COMMENT '备份ID（32位无连字符UUID）',
+    `user_id`    BIGINT   NOT NULL,
+    `size`       BIGINT   NOT NULL COMMENT '文件大小（字节）',
+    `created_at` DATETIME NOT NULL COMMENT '创建时间（UTC）',
+    PRIMARY KEY (`id`)
+)
+    ENGINE = InnoDB
+    DEFAULT CHARSET = utf8mb4
+    COLLATE = utf8mb4_0900_ai_ci;
