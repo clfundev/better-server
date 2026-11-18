@@ -5,8 +5,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/better?connectionTimeZone=Asia/Shanghai&forceConnectionTimeZoneToSession=true
-    username: ${BETTER_DB_USERNAME}
-    password: ${BETTER_DB_PASSWORD}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   servlet:
     multipart:
@@ -34,7 +34,7 @@ security:
       - /user/refresh
 
 jwt:
-  secret: ${BETTER_JWT_SECRET}
+  secret: ${JWT_SECRET}
   at-expiration-ms: 1800000
   rt-expiration-ms: 604800000
 
